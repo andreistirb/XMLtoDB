@@ -33,11 +33,53 @@ public class Main {
 		for (int i = 0; i < trkList.getLength(); i++) {
 			Node trk = trkList.item(i);
 			if (trk.getNodeName().equals("trk")) {
+				Track traseu = new Track();
 				NodeList trksegList = trk.getChildNodes();
 				for (int j = 0; j < trksegList.getLength(); j++) {
-					Node trkseg = trksegList.item(j);
-					if (trkseg.getNodeName().equals("trkseg")) {
-						NodeList trkptList = trkseg.getChildNodes();
+					Node trkchild = trksegList.item(j);
+					switch (trkchild.getNodeName()){
+					case "name" : {
+						traseu.setTitle(trkchild.getTextContent());
+						System.out.println("Name: " + trkchild.getTextContent());
+						break;
+					}
+					case "diff" : {
+						traseu.setDifficulty(trkchild.getTextContent());
+						System.out.println("Difficulty: " + trkchild.getTextContent());
+						break;
+					}
+					case "duration" : {
+						traseu.setDuration(trkchild.getTextContent());
+						System.out.println("Duration: " + trkchild.getTextContent());
+						break;
+					}
+					case "mark" : {
+						traseu.setMark(trkchild.getTextContent());
+						System.out.println("Mark: " + trkchild.getTextContent());
+						break;
+					}
+					case "accesibility" : {
+						traseu.setAccesibility(trkchild.getTextContent());
+						System.out.println("Accesibility: " + trkchild.getTextContent());
+						break;
+					}
+					case "maxAlt" : {
+						traseu.setMax_alt(trkchild.getTextContent());
+						System.out.println("Max_alt: " + trkchild.getTextContent());
+						break;
+					}
+					case "minAlt" : {
+						traseu.setMin_alt(trkchild.getTextContent());
+						System.out.println("Min_alt: " + trkchild.getTextContent());
+						break;
+					}
+					case "desc" : {
+						traseu.setDescription(trkchild.getTextContent());
+						System.out.println("Description: " + trkchild.getTextContent());
+						break;
+					}
+ 					case "trkseg": {
+						NodeList trkptList = trkchild.getChildNodes();
 						for (int k = 0; k < trkptList.getLength(); k++) {
 							Node trkpt = trkptList.item(k);
 							if (trkpt instanceof Element) {
@@ -49,8 +91,9 @@ public class Main {
 												+ trkpt.getAttributes().getNamedItem("lon").getNodeValue());
 							}
 						}
+						break;
 					}
-
+					}
 				}
 			}
 		}
