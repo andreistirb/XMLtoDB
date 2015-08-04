@@ -931,8 +931,8 @@
  <duration>3-4h</duration>
  <mark>banda_galbena</mark>
  <accesibility>toate anotimpurile</accesibility>
- <maxAlt>2456</maxAlt>
- <minAlt>2012</minAlt>
+ <maxAlt>2456m</maxAlt>
+ <minAlt>2012m</minAlt>
  <desc>TrackGPS</desc>
  <trkseg>
   <trkpt lat="45.548338" lon="22.989471">
