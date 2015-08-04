@@ -27,7 +27,7 @@ public class Main {
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder builder = factory.newDocumentBuilder();
 		Document document = builder.parse(file);
-
+		
 		NodeList trkList = document.getDocumentElement().getChildNodes();
 
 		for (int i = 0; i < trkList.getLength(); i++) {
