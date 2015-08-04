@@ -85,6 +85,44 @@ public class Track {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	
+	public void printTrackData(){
+		System.out.println(this.title);
+		System.out.println("Dificultate: " + this.difficulty + "\n"
+				+ "Durata: " + this.duration + "\n"
+				+ "Marcaj: " + this.mark + "\n" 
+				+ "Accesibilitate: " + this.accesibility + "\n"
+				+ "Altitudine minima: " + this.min_alt + "\n"
+				+ "Altitudine maxima: " + this.max_alt + "\n"
+				+ "Descriere: " + this.description);
+		System.out.println("Puncte traseu: ");
+		for(int i=0;i<this.points.size();i++){
+			System.out.println("lat: " + this.points.get(i).getLatitude() + "\t"
+					+ "lon: " + this.points.get(i).getLongitude() + "\t"
+					+ "alt: " + this.points.get(i).getAltitude());
+		}
+		
+	}
+	
+	public void computeMinAlt(){
+		Double min_alt = Double.valueOf(9999);
+		for(int i=0;i<this.points.size();i++){
+			Double alt = Double.valueOf(this.points.get(i).getAltitude());
+			if (min_alt > alt)
+				min_alt = alt;
+		}
+		this.setMin_alt(min_alt.toString() + "m");
+	}
+	
+	public void computeMaxAlt(){
+		Double max_alt = Double.valueOf(0);
+		for(int i=0;i<this.points.size();i++){
+			Double alt = Double.valueOf(this.points.get(i).getAltitude());
+			if (max_alt < alt)
+				max_alt = alt;
+		}
+		this.setMax_alt(max_alt.toString() + "m");
+	}
 
 	
 }
