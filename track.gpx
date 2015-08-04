@@ -927,6 +927,7 @@
 </wpt>
 <trk>
  <name>01_BA</name>
+ <id>200003</id>
  <diff>medie</diff>
  <duration>3-4h</duration>
  <mark>banda_galbena</mark>
