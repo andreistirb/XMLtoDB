@@ -62,8 +62,8 @@ public class XMLParser {
 						traseu.setMark(trkchild.getTextContent());
 						break;
 					}
-					case "accesibility" : {
-						traseu.setAccesibility(trkchild.getTextContent());
+					case "accessibility" : {
+						traseu.setAccessibility(trkchild.getTextContent());
 						break;
 					}
 					case "desc" : {

@@ -3,7 +3,7 @@ package com.andreistirb.xmltodb;
 import java.util.ArrayList;
 
 public class Track {
-	private String title, id, mountainId, difficulty, duration, mark, accesibility, max_alt, min_alt, description;
+	private String title, id, mountainId, difficulty, duration, mark, accessibility, max_alt, min_alt, description;
 	private ArrayList<TrackPoint> points;
 	
 	public Track(){
@@ -13,7 +13,7 @@ public class Track {
 		this.setDifficulty("");
 		this.setDuration("");
 		this.setMark("");
-		this.setAccesibility("");
+		this.setAccessibility("");
 		this.setMax_alt("");
 		this.setMin_alt("");
 		this.setDescription("");
@@ -76,12 +76,12 @@ public class Track {
 		this.mark = mark;
 	}
 
-	public String getAccesibility() {
-		return accesibility;
+	public String getAccessibility() {
+		return accessibility;
 	}
 
-	public void setAccesibility(String accesibility) {
-		this.accesibility = accesibility;
+	public void setAccessibility(String accesibility) {
+		this.accessibility = accesibility;
 	}
 
 	public String getMax_alt() {
@@ -115,7 +115,7 @@ public class Track {
 		System.out.println("Dificultate: " + this.difficulty + "\n"
 				+ "Durata: " + this.duration + "\n"
 				+ "Marcaj: " + this.mark + "\n" 
-				+ "Accesibilitate: " + this.accesibility + "\n"
+				+ "Accesibilitate: " + this.accessibility + "\n"
 				+ "Altitudine minima: " + this.min_alt + "\n"
 				+ "Altitudine maxima: " + this.max_alt + "\n"
 				+ "Descriere: " + this.description);

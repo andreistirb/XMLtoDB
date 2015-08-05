@@ -30,7 +30,7 @@ public class Database {
 					+ Integer.parseInt(traseu.getId()) + ", " + Integer.parseInt(traseu.getMountainId()) + ", " + "'"
 					+ traseu.getTitle() + "'" + ", " + "'" + traseu.getDifficulty() + "'" + ", " + "'"
 					+ traseu.getMark() + "'" + ", " + "'" + traseu.getDuration() + "'" + ", " + "'"
-					+ traseu.getDescription() + "'" + ", " + "'" + traseu.getAccesibility() + "'" + ")";
+					+ traseu.getDescription() + "'" + ", " + "'" + traseu.getAccessibility() + "'" + ")";
 			stmt.execute(sql);
 	}
 
