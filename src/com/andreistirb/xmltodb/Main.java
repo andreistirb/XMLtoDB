@@ -25,12 +25,15 @@ public class Main {
 		File file = new File(filename);
 		Track traseu = new Track();
 		XMLParser parser = new XMLParser(file);
+		Database db = new Database("MountainTracker.s3db");
 		
 		parser.parse(traseu);
 		
 		traseu.computeMaxAlt();
 		traseu.computeMinAlt();
 		traseu.printTrackData();
+		
+		db.insertTrackIntoDatabase(traseu);
 	}
 
 }

@@ -46,6 +46,10 @@ public class XMLParser {
 						traseu.setId(trkchild.getTextContent());
 						break;
 					}
+					case "mid" : {
+						traseu.setMountainId(trkchild.getTextContent());
+						break;
+					}
 					case "diff" : {
 						traseu.setDifficulty(trkchild.getTextContent());
 						break;
@@ -72,6 +76,7 @@ public class XMLParser {
 							Node trkpt = trkptList.item(k);
 							if (trkpt instanceof Element) {
 								TrackPoint trackpoint = new TrackPoint();
+								trackpoint.setTrackId(traseu.getId());
 								trackpoint.setLatitude(trkpt.getAttributes().getNamedItem("lat").getNodeValue());
 								trackpoint.setLongitude(trkpt.getAttributes().getNamedItem("lon").getNodeValue());
 								NodeList altList = trkpt.getChildNodes();

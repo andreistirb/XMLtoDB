@@ -1,18 +1,27 @@
 package com.andreistirb.xmltodb;
 
 public class TrackPoint {
-	private String latitude, longitude, altitude;
+	private String latitude, longitude, altitude, trackId;
 	
 	public TrackPoint(){
 		this.latitude = "";
 		this.longitude = "";
 		this.altitude = "";
+		this.trackId = "";
 	}
 	
 	public TrackPoint(String lat, String lon, String alt){
 		this.latitude = lat;
 		this.longitude = lon;
 		this.altitude = alt;
+	}
+
+	public String getTrackId() {
+		return trackId;
+	}
+	
+	public void setTrackId(String trackId) {
+		this.trackId = trackId;
 	}
 
 	public String getLatitude() {

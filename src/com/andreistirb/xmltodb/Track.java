@@ -3,12 +3,13 @@ package com.andreistirb.xmltodb;
 import java.util.ArrayList;
 
 public class Track {
-	private String title, id, difficulty, duration, mark, accesibility, max_alt, min_alt, description;
+	private String title, id, mountainId, difficulty, duration, mark, accesibility, max_alt, min_alt, description;
 	private ArrayList<TrackPoint> points;
 	
 	public Track(){
 		this.title = "";
 		this.id = "";
+		this.mountainId = "";
 		this.setDifficulty("");
 		this.setDuration("");
 		this.setMark("");
@@ -37,6 +38,18 @@ public class Track {
 
 	public void setId(String id) {
 		this.id = id;
+	}
+
+	public String getMountainId() {
+		return mountainId;
+	}
+
+	public void setMountainId(String mountainId) {
+		this.mountainId = mountainId;
+	}
+
+	public ArrayList<TrackPoint> getPoints() {
+		return points;
 	}
 
 	public String getDifficulty() {
@@ -98,6 +111,7 @@ public class Track {
 	public void printTrackData(){
 		System.out.println(this.title);
 		System.out.println("ID: " + this.id);
+		System.out.println("Mountain ID: " + this.mountainId);
 		System.out.println("Dificultate: " + this.difficulty + "\n"
 				+ "Durata: " + this.duration + "\n"
 				+ "Marcaj: " + this.mark + "\n" 
